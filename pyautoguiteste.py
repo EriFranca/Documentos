@@ -3,10 +3,21 @@ import time
 
 import pyautogui
 import time
+import pygetwindow as gw
 
 # 1 - Verificar se existe uma janela do SAP aberta
 # Implemente a lógica de verificação da janela do SAP aberta de acordo com suas necessidades
+# Função para verificar se uma janela do SAP está aberta
+def is_sap_window_open():
+    sap_window_title = "SAP"  # Título da janela do SAP (pode variar, ajuste conforme necessário)
+    sap_window = gw.getWindowsWithTitle(sap_window_title)
 
+    return len(sap_window) > 0
+
+if not is_sap_window_open():
+    print("A janela do SAP não está aberta. Por favor, abra o SAP e execute o script novamente.")
+    exit()
+    
 # 2 - Acessar a transação /OZFIR002
 # Pressionar a combinação de teclas para acessar a transação
 pyautogui.hotkey('ctrl', '/')
