@@ -1,8 +1,3 @@
-'''
-ME2N - Transação para fazer automação com python
-Ambiene QAS documento de teste 4500000001
-'''
-# coding: utf-8
 import time
 import subprocess
 import login
@@ -45,7 +40,7 @@ time.sleep(10)
 
 elemento = driver.find_element_by_id("1001").click()
 elemento = driver.find_element_by_id("1001")
-elemento.send_keys('ME2N')
+elemento.send_keys('ZFIR002')
 elemento.submit()
 
 time.sleep(2)

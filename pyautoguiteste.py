@@ -1,8 +1,5 @@
 import pyautogui
 import time
-
-import pyautogui
-import time
 import pygetwindow as gw
 
 # 1 - Verificar se existe uma janela do SAP aberta
